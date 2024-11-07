@@ -5,7 +5,7 @@ import { AllExceptionsFilter } from './shared/filters/http-exception.filter';
 import { Logger, LoggerErrorInterceptor } from 'nestjs-pino';
 
 async function bootstrap() {
-  const PORT = 3333;
+  const PORT = process.env.PORT || 8080;
   const app = await NestFactory.create(AppModule);
   app.useGlobalFilters(new AllExceptionsFilter());
 

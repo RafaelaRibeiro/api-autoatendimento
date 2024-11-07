@@ -20,7 +20,10 @@ FROM node:16 AS production
 WORKDIR /app
 
 # Definir NODE_ENV como production
+ENV NODE_ENV=production
 
+# Expor a porta 8080 para o Cloud Run
+EXPOSE 8080
 
 # Copiar apenas as dependências de produção
 COPY package*.json ./
