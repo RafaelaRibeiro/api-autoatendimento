@@ -23,7 +23,6 @@ WORKDIR /app
 ENV NODE_ENV=production
 
 # Expor a porta 8080 para o Cloud Run
-EXPOSE 8080
 
 # Copiar apenas as dependências de produção
 COPY package*.json ./
@@ -37,4 +36,5 @@ COPY --from=build /app/node_modules/.prisma /app/node_modules/.prisma
 COPY --from=build /app/prisma /app/prisma
 
 # Definir o comando para rodar a aplicação
+EXPOSE 8080
 CMD ["npm", "run", "start:prod"]

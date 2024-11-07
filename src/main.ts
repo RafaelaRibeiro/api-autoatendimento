@@ -6,7 +6,7 @@ import { Logger, LoggerErrorInterceptor } from 'nestjs-pino';
 
 async function bootstrap() {
   //porta
-  const PORT = 8080;
+  const PORT = process.env.PORT || 8080;
   const app = await NestFactory.create(AppModule);
   app.useGlobalFilters(new AllExceptionsFilter());
 
