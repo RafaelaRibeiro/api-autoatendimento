@@ -1,4 +1,5 @@
 import { MiddlewareConsumer, Module, NestModule } from '@nestjs/common';
+import { ConfigModule } from '@nestjs/config';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
@@ -14,7 +15,7 @@ import { MedicalFeesModule } from './modules/medical-fees/medical-fees.module';
 import { ServiceOrderItemsModule } from './modules/service-order-items/service-order-items.module';
 import { ProcessingModule } from './modules/processing/processing.module';
 import { TestModule } from './modules/test/test.module';
-import { ConfigModule } from '@nestjs/config';
+
 import { LoggerModule } from 'nestjs-pino';
 import { PatientQueueModule } from './modules/patient-queue/patient-queue.module';
 
