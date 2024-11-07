@@ -1,0 +1,14 @@
+version: '3'
+services:
+  api-autoatendimento:
+    image: api-autoatendimento  # Nome da imagem, que você já deve ter construído
+    build:
+      context: .                # Diretório onde está o Dockerfile
+      dockerfile: Dockerfile     # Nome do Dockerfile
+    ports:
+      - "3333:3333"              # Mapeamento de porta: host:container
+    env_file:
+      - .env                     # Arquivo que contém variáveis de ambiente
+    environment:
+      NODE_ENV: production       # Define NODE_ENV como produção para o contêiner
+    restart: always              # Reinicia o contêiner automaticamente em caso de falha

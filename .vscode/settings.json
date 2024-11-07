@@ -1,0 +1,28 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.activityBar.iconClickBehavior": "focus",
+    "cSpell.language": "en,pt-BR",
+    "editor.fontFamily": "\"JetBrains Mono\", 'Courier New', monospace",
+    "editor.fontLigatures": true,
+    "editor.fontVariations": true,
+    "terminal.integrated.cursorBlinking": false,
+    "terminal.integrated.cursorStyle": "line",
+    "material-icon-theme.activeIconPack": "nest",
+    "material-icon-theme.files.associations": {
+        "*.module.ts": "nest-module",
+        "*.controller.ts": "nest-controller",
+        "*.service.ts": "nest-service",
+        "*.middleware.ts": "nest-middleware",
+        "*.filter.ts": "nest-filter",
+        "*.pipe.ts": "nest-pipe",
+        "*.gateway.ts": "nest-gateway",
+        "*.decorator.ts": "nest-decorator",
+        "*.guard.ts": "nest-guard",
+        "*.resolver.ts": "nest-resolver",
+    
+    },
+    "editor.lineHeight": 22,
+    "debug.console.lineHeight": 0,
+    "material-icon-theme.folders.color": "#6495ED",
+    "material-icon-theme.folders.theme": "specific"
+}
