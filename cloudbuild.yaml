@@ -1,0 +1,26 @@
+steps:
+  # Etapa 1: Build da imagem Docker
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'gcr.io/api-autoatendimento/autoatendimento', '.']
+
+  # Etapa 2: Envio da imagem para o Container Registry
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'gcr.io/api-autoatendimento/autoatendimento']
+
+  # Etapa 3: Implantação no Cloud Run
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - 'run'
+      - 'deploy'
+      - 'autoatendimento'
+      - '--image'
+      - 'gcr.io/api-autoatendimento/autoatendimento'
+      - '--platform'
+      - 'managed'
+      - '--region'
+      - 'southamerica-east1'
+      - '--allow-unauthenticated'
+
+images:
+  - 'gcr.io/api-autoatendimento/autoatendimento'
